@@ -1,18 +1,12 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.internal.WebElementToJsonConverter;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // modyfikatory dostępu w Java
 // różnica pomiędzy klasą, interfejsem a klasą abstrakcyjną
-public class UltimateQATest extends PageSetup{
+public class UltimateQATest extends PageSetup {
 
     // słowo kluczowe void - zwracanie z funkcji
     // słowo static
