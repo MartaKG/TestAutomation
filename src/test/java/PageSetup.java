@@ -7,6 +7,8 @@ public class PageSetup {
 
     String projectLocation = System.getProperty("user.dir");
     String ultimateQAURL = "https://ultimateqa.com/simple-html-elements-for-automation/";
+
+    String loginPageURL = "https://courses.ultimateqa.com/users/sign_in";
     WebDriver driver;
 
     @BeforeEach
@@ -23,7 +25,7 @@ public class PageSetup {
 
     @AfterEach
     public void teardown() {
-        // różnica pomiędzy driver.close() a driver.quit()
+        // difference between driver.close() and driver.quit()
         driver.quit();
 
     }

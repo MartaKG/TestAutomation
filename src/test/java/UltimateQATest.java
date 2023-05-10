@@ -4,12 +4,12 @@ import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-// modyfikatory dostępu w Java
-// różnica pomiędzy klasą, interfejsem a klasą abstrakcyjną
+// access modifiers in Java
+// difference between class, interface and abstract class
 public class UltimateQATest extends PageSetup {
 
-    // słowo kluczowe void - zwracanie z funkcji
-    // słowo static
+    // keyword void - return from function
+    // keyword static
     @Test
     public void testOne() {
         WebElement button = driver.findElement(By.id("idExample"));
@@ -35,5 +35,15 @@ public class UltimateQATest extends PageSetup {
 
         WebElement thanksText = driver.findElement(By.xpath("//div[@class='et-pb-contact-message']/p"));
         assertEquals("Thanks for contacting us", thanksText.getText());
+    }
+    @Test
+    public void TestThree() throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement link = driver.findElement(By.linkText("Go to login page"));
+        link.click();
+        Thread.sleep(2000);
+
+        assertEquals(loginPageURL, driver.getCurrentUrl());
+
     }
 }
