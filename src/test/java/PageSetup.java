@@ -13,7 +13,7 @@ public class PageSetup {
     public void setup() {
         //biblioteka WebdriverManager - io.github.bonigarcia
         //System.out.println(projectLocation);
-        System.setProperty("webdriver.chrome.driver", projectLocation + "/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", projectLocation + "/resources/chromedriver113.exe");
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -24,7 +24,7 @@ public class PageSetup {
     @AfterEach
     public void teardown() {
         // różnica pomiędzy driver.close() a driver.quit()
-        driver.close();
+        driver.quit();
 
     }
 }
